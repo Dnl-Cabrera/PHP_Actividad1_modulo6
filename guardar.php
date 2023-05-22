@@ -14,7 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Guardar el registro en el archivo de texto
     file_put_contents($archivo, $registro, FILE_APPEND | LOCK_EX);
 
-    echo '¡Gracias por contactarnos!';
+    echo '<script language="javascript">
+            alert("!Gracias por contactarnos¡");
+            window.location="formulario.html";
+        </script>';
+    
 } else {
     echo 'Ocurrió un error al procesar el formulario.';
 }
